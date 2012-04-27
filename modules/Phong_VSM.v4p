@@ -1,0 +1,639 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta27.1.dtd" >
+   <PATCH nodename="C:\OCSASS\VSM 1.0\modules\Phong_VSM.v4p" filename="C:\Users\bernardo\Desktop\MRE - Multipass Render Engine 1.1\Scene\Phong_VSM.v4p" systemname="Phong_VSM">
+   <BOUNDS height="8475" left="660" top="1185" type="Window" width="19050">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="14" nodename="IOBox (Value Advanced)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="240" top="225" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="540" left="240" top="225" type="Box" width="6285">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" pintype="Input" slicecount="1" visible="0" values="Phong_VSM">
+   </PIN>
+   <PIN pinname="Output String" pintype="Output" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="24" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="585" top="7215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="585" top="7215" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Layer MRT|">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="25" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="1905" top="7215" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1905" top="7215" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Layer VSM|">
+   </PIN>
+   <PIN pinname="Input Node">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="34" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="4275" top="3765" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="35" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="100" left="4275" top="3015" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="300" left="4275" top="3015" type="Box" width="1065">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="VSM_Texture">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="36" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="4275" top="3390" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="36" dstpinname="String Value" srcnodeid="35" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="34" dstpinname="Receive String" srcnodeid="36" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="InABox" id="47" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="9795" top="2625" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="300" left="9795" top="2625" type="Box" width="1155">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_Position">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="45" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="10410" top="3660" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="315" left="10410" top="3660" type="Box" width="1305">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_Direction">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="43" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="3660" top="2115" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="315" left="3660" top="2115" type="Box" width="1830">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_ShadowsAmount">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="41" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="9180" top="1590" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="345" left="9180" top="1590" type="Box" width="2100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_Shadows_LightRange">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="39" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="7335" top="3780" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="315" left="7335" top="3780" type="Box" width="1830">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_ShadowsUmbra">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="37" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="7950" top="4710" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="315" left="7950" top="4710" type="Box" width="1830">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_ShadowsPenumbra">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="54" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="9795" top="3135" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="53" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="9795" top="3510" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="53" dstpinname="Receive String" srcnodeid="54" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="56" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="10410" top="4155" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="55" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="10410" top="4530" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="55" dstpinname="Receive String" srcnodeid="56" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="58" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="3660" top="2580" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="57" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="3660" top="2955" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="57" dstpinname="Receive String" srcnodeid="58" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="60" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="7335" top="4215" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="59" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="7335" top="4590" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="59" dstpinname="Receive String" srcnodeid="60" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="62" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="7950" top="5115" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="61" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="7950" top="5490" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="61" dstpinname="Receive String" srcnodeid="62" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="64" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="9180" top="2115" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="63" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="9180" top="2490" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="63" dstpinname="Receive String" srcnodeid="64" srcpinname="Enum">
+   </LINK>
+   <LINK dstnodeid="54" dstpinname="String Value" srcnodeid="47" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="56" dstpinname="String Value" srcnodeid="45" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="58" dstpinname="String Value" srcnodeid="43" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="60" dstpinname="String Value" srcnodeid="39" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="62" dstpinname="String Value" srcnodeid="37" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="64" dstpinname="String Value" srcnodeid="41" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="InABox" id="71" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="5490" top="4620" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="330" left="5490" top="4620" type="Box" width="1455">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_InverseView">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="69" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="4890" top="3825" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="315" left="4890" top="3825" type="Box" width="1665">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_ViewProjection">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="84" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="5490" top="5025" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="88" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="4890" top="4230" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="83" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="5490" top="5400" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="83" dstpinname="Receive String" srcnodeid="84" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="Hidden" id="87" nodename="R (Node)" systemname="R (Node)">
+   <BOUNDS height="100" left="4890" top="4605" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="87" dstpinname="Receive String" srcnodeid="88" srcpinname="Enum">
+   </LINK>
+   <LINK dstnodeid="84" dstpinname="String Value" srcnodeid="71" srcpinname="Output String">
+   </LINK>
+   <LINK dstnodeid="88" dstpinname="String Value" srcnodeid="69" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="InABox" id="90" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="11025" top="4680" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="315" left="11025" top="4680" type="Box" width="1305">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_Color">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="92" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="11025" top="5130" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="92" dstpinname="String Value" srcnodeid="90" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="Hidden" id="91" nodename="R (Color)" systemname="R (Color)">
+   <BOUNDS height="100" left="11025" top="5505" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="91" dstpinname="Receive String" srcnodeid="92" srcpinname="Enum">
+   </LINK>
+   <NODE componentmode="InABox" id="96" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="0" left="17160" top="4230" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="315" left="17160" top="4230" type="Box" width="1125">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" values="Light_Type">
+   </PIN>
+   <PIN encoded="0" pinname="Default" slicecount="1" values="devnul">
+   </PIN>
+   <PIN encoded="0" pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" hiddenwhenlocked="1" id="98" nodename="String2Enum (Enumerations)" systemname="String2Enum (Enumerations)">
+   <BOUNDS height="100" left="17160" top="4710" type="Node" width="100">
+   </BOUNDS>
+   <PIN encoded="0" pinname="String Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="97" nodename="R (Value)" systemname="R (Value)">
+   <BOUNDS height="100" left="17160" top="5085" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="97" dstpinname="Receive String" srcnodeid="98" srcpinname="Enum">
+   </LINK>
+   <LINK dstnodeid="98" dstpinname="String Value" srcnodeid="96" srcpinname="Output String">
+   </LINK>
+   <NODE componentmode="Hidden" id="99" nodename="Ord2Enum (Enumerations)" systemname="Ord2Enum (Enumerations)">
+   <BOUNDS height="100" left="17160" top="5505" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="99" dstpinname="Ord Value" srcnodeid="97" srcpinname="Input Value">
+   </LINK>
+   <NODE componentmode="InABox" id="105" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="1545" top="1050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="1545" top="1050" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="64" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Mesh">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="106" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="2505" top="1050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="2505" top="1050" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="64" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Transform">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="..\effect\Phong_MRT_VSM.fx" id="100" nodename="Phong_MRT_VSM (EX9.Effect)" systemname="Phong_MRT_VSM (EX9.Effect)">
+   <BOUNDS height="270" left="585" top="5970" type="Node" width="17865">
+   </BOUNDS>
+   <PIN pinname="Ambient Color" visible="1">
+   </PIN>
+   <PIN pinname="Diffuse Amount" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Render State" slicecount="1" visible="1" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Mesh" slicecount="64" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Transform" slicecount="64" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Shadow Intensity" visible="1">
+   </PIN>
+   <PIN pinname="VSM texture" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Light View Projection" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Light inverse View" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Light Umbra" visible="1">
+   </PIN>
+   <PIN pinname="Light Penumbra" visible="1">
+   </PIN>
+   <PIN pinname="Light Direction XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Light Position XYZ" visible="1">
+   </PIN>
+   <PIN pinname="lightRange XY" visible="1">
+   </PIN>
+   <PIN pinname="Light Color" visible="1">
+   </PIN>
+   <PIN pinname="Object Color" visible="1">
+   </PIN>
+   <PIN pinname="Texture Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Technique" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="24" dstpinname="Input Node" srcnodeid="100" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Mesh" hiddenwhenlocked="1" srcnodeid="105" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Transform" hiddenwhenlocked="1" srcnodeid="106" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="Hidden" filename="..\effect\VSM_Pass.fx" id="12" nodename="VSM_Pass (EX9.Effect)" systemname="VSM_Pass (EX9.Effect)">
+   <BOUNDS height="270" left="1905" top="6675" type="Node" width="7455">
+   </BOUNDS>
+   <PIN pinname="Mesh" slicecount="64" visible="1" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="Transform" slicecount="64" visible="1" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   <PIN pinname="lightPos XYZ" visible="1">
+   </PIN>
+   <PIN pinname="Light Attenuation Far" visible="1">
+   </PIN>
+   <PIN pinname="lightRange XY" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Render State" slicecount="1" visible="1" values=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="25" dstpinname="Input Node" srcnodeid="12" srcpinname="Layer">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="lightPos XYZ" hiddenwhenlocked="1" srcnodeid="53" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="lightRange XY" hiddenwhenlocked="1" srcnodeid="63" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Transform" hiddenwhenlocked="1" srcnodeid="106" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Mesh" hiddenwhenlocked="1" srcnodeid="105" srcpinname="Output Node">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Shadow Intensity" srcnodeid="57" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="VSM texture" srcnodeid="34" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Light View Projection" srcnodeid="87" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Light inverse View" srcnodeid="83" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Light Umbra" srcnodeid="59" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Light Penumbra" srcnodeid="61" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Light Direction XYZ" srcnodeid="55" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Light Position XYZ" srcnodeid="53" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="lightRange XY" srcnodeid="63" srcpinname="Input Value">
+   </LINK>
+   <LINK dstnodeid="100" dstpinname="Light Color" srcnodeid="91" srcpinname="Input Value">
+   </LINK>
+   <NODE componentmode="InABox" id="109" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="0" left="15945" top="1050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="15945" top="1050" type="Box" width="2250">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|0.37680,0.37680,0.37680,1.00000|">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Ambient Color|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="100" dstpinname="Ambient Color" srcnodeid="109" srcpinname="Color Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="110" nodename="Cull (EX9.RenderState)" systemname="Cull (EX9.RenderState)">
+   <BOUNDS height="100" left="585" top="2475" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Render State In" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Render State Out" visible="1">
+   </PIN>
+   <PIN pinname="Culling" slicecount="1" values="Counterclockwise">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="100" dstpinname="Render State" srcnodeid="110" srcpinname="Render State Out">
+   </LINK>
+   <LINK dstnodeid="12" dstpinname="Render State" srcnodeid="110" srcpinname="Render State Out">
+   </LINK>
+   <NODE componentmode="InABox" id="111" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="570" top="1050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="570" top="1050" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Render State In|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="110" dstpinname="Render State In" srcnodeid="111" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="112" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="3510" top="1050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="3510" top="1050" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Texture">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="100" dstpinname="Texture" srcnodeid="112" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="113" nodename="IOBox (Color)" systemname="IOBox (Color)">
+   <BOUNDS height="0" left="13500" top="1050" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="480" left="13500" top="1050" type="Box" width="2250">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" values="|0.70665,0.70665,0.70665,1.00000|">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Object Color|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="100" dstpinname="Object Color" srcnodeid="113" srcpinname="Color Output">
+   </LINK>
+   <NODE componentmode="InABox" id="114" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="0" left="4875" top="1035" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="4875" top="1035" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="|Texture Transform|">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="100" dstpinname="Texture Transform" srcnodeid="114" srcpinname="Output Node">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Enum" dstnodeid="100" dstpinname="Technique">
+   </LINK>
+   </PATCH>
